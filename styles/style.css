@@ -1,0 +1,455 @@
+/*Nick J Verwoerd 2019 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  grid-area: header;
+}
+body {
+  font-family: 'Archivo', sans-serif;
+}
+nav {
+  margin: 0 auto;
+  width: 950px;
+  grid-area: nav;
+  background-color: #222931;
+  height: 55px;
+}
+.menuButton {
+  font-weight: 500;
+  position: relative;
+  padding: 20px;
+  background-color: #222931;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  top: 16px;
+}
+.page {
+  display: grid;
+width: 1000px;
+  grid-template-areas: 
+"header header header"
+"nav nav nav"
+"bigPicture bigPicture bigPicture"
+"banner1 banner2 banner3"
+"yellowbar yellowbar yellowbar"
+"footerButton1 footerButton2 footerButton3"
+"greyLine greyLine greyLine"
+"text text text2";
+  height: 100%;
+  margin: 0px auto;
+}
+#logo {
+  margin: 20px;
+}
+#arrow {
+  width: 10px;
+  color: #ffffff;
+}
+#header {
+  width:100%;
+  position:absolute;
+}
+#emptySpace {
+  height: 495px;
+}
+#bigPicture{
+  z-index: -1;
+  height: 516.5px;
+  position: absolute;
+  top: 100px;
+  grid-area: bigPicture;
+  width: 100%;
+}
+#emptySpace2 {
+  height: 225px;
+}
+#bigFooter {
+  z-index: -1;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+#banner1Div {
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 220px;
+  background-image: url("../img/banner-1.jpg");
+  grid-area: banner1;
+}
+#banner2Div {
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 300px;
+  height: 220px;
+  background-image: url("../img/banner-2.jpg");
+  grid-area: banner2;
+}
+#banner3Div {
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 300px;
+  height: 220px;
+  background-image: url("../img/banner-3.jpg");
+  grid-area: banner3;
+}
+#banner1hover {
+  padding-top: 30%;
+  height: 59%;
+  max-height: 100%;
+  text-align: center;
+  display: none;
+  background-color: rgba(17, 17, 17, 0.646);
+  color: white;
+  font-size: 38px;
+  font-weight: 600;
+}
+#banner1Div:hover #banner1hover {display: block;}
+
+#banner2hover {
+  padding-top: 30%;
+  height: 59%;
+  max-height: 100%;
+  text-align: center;
+  display: none;
+  background-color: rgba(17, 17, 17, 0.646);
+  color: white;
+  font-size: 38px;
+  font-weight: 600;
+}
+#banner2Div:hover #banner2hover {display: block;}
+
+#banner3hover {
+  padding-top: 30%;
+  height: 59%;
+  max-height: 100%;
+  text-align: center;
+  display: none;
+  background-color: rgba(17, 17, 17, 0.646);
+  color: white;
+  font-size: 38px;
+  font-weight: 600;
+}
+#banner3Div:hover #banner3hover {display: block;}
+
+#yellowbar {
+  background-color: #ffe718;
+  height: 110px;
+  width: 100%;
+  grid-area: yellowbar;
+  margin-bottom: 70px;
+}
+#ribbonTitle {
+  position: relative;
+  top: 33.8px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #222931;
+}
+#ribbonText {
+  margin-left: 15px;
+  position: relative;
+  top: 33px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222931;
+}
+#ribbonContent {
+  height: 100px;
+  width: 1000px;
+  margin: 0px auto;
+}
+#ribbonButton {
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  top: 32px;
+  float: right;
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+  padding: 10px 40px;
+}
+#ribbonButton:hover {background-color: #222931; color: white;}
+
+.footerSmallText {
+  font-size: 12px;
+  font-weight: 400;
+}
+#footerButton1 {
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 20px;
+  height: 85px;
+  width: 300px;
+  grid-area: footerButton1;
+  background-color: #ffe718;
+  text-decoration: none;
+  color: #222931;
+}
+#footerButton1:hover {background-color: #222931; color: #ffffff;}
+
+#footerButton2 {
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 20px;
+  height: 85px;
+  width: 300px;
+  grid-area: footerButton2;
+  background-color: #ffe718;
+  text-decoration: none;
+  color: #222931;
+}
+#footerButton2:hover {background-color: #222931; color: #ffffff;}
+
+#footerButton3 {
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 20px;
+  height: 85px;
+  width: 300px;
+  grid-area: footerButton3;
+  background-color: #ffe718;
+  text-decoration: none;
+  color: #222931;
+}
+#footerButton3:hover {background-color: #222931; color: #ffffff;}
+
+#symbol1 {
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 50px;
+  display: block;
+  float: left;
+}
+#symbol2 {
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 50px;
+  display: block;
+  float: left;
+}
+#symbol3 {
+  margin-left: 10px;
+  margin-right: 25px;
+  font-size: 50px;
+  display: block;
+  float: left;
+}
+#marker {
+  color: rgba(128, 128, 128, 0.493);
+  margin-left: 20px;
+  margin-right: 22px;
+  font-size: 25px;
+  display: block;
+  float: left;
+}
+#mobile {
+  color: rgba(128, 128, 128, 0.493);
+  margin-left: 20px;
+  margin-right: 25px;
+  font-size: 25px;
+  display: block;
+  float: left;
+}
+#envelope {
+  color: rgba(128, 128, 128, 0.493);
+  margin-left: 20px;
+  margin-right: 17px;
+  font-size: 25px;
+  display: block;
+  float: left;
+}
+#greyLine {
+  grid-area: greyLine;
+  margin-top: 60px;
+  height: 40px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+}
+#overOns {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 60px;
+  width: 500px;
+  grid-area: text;
+  color: #5f656d;
+}
+#overOns h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #5f656d;
+}
+#contact {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 60px;
+  width: 500px;
+  grid-area: text2;
+  float: right;
+  color: #5f656d
+}
+#contact h1 {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+#footerfooter {
+  margin-top: 40px;
+  background-color: #222931;
+  height: 60px;
+}
+#footerfootertext {
+  margin-top: 20px;
+  margin-right: 5px;
+  color: white;
+  float: right;
+}
+#footerfootertextbox {
+  width: 1000px;
+  margin: 0px auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: #222931;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 10px 16px;
+  margin: 6px 0px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ffe718; color: black;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .menuButton {background-color: #ffe718; color: black;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.menuButton:hover {background-color: #ffe718; color: black;}
+
+
+
+ ul.breadcrumb {
+  width: 1000px;
+  margin: 0 auto;
+  height: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 12px;
+  font-weight: 400;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+} 
+#nieuwbouw {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #ffe718;
+}
+#regelgeving {
+  color: #ffe718;
+}
+#advies {
+  color: #ffe718;
+}
+#nieuwbouwdropdown {
+  background-color: #959595;
+  padding: 5px;
+  color: white;
+  width: 200px;
+  left: 55%;
+  top: 95%;
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 400;
+}
+#adviesdropdown {
+  background-color: #959595;
+  padding: 5px;
+  color: white;
+  width: 200px;
+  left: 73%;
+  top: 116%;
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 400;
+}
+#regelgevingdropdown {
+  background-color: #959595;
+  padding: 5px;
+  color: white;
+  width: 200px;
+  left: 49%;
+  top: 119%;
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 400;
+}
+#textPageText:hover #nieuwbouwdropdown{display: inline-block;}
+#textPageText:hover #adviesdropdown{display: inline-block;}
+#textPageText:hover #regelgevingdropdown{display: inline-block;}
+
+#textPageTitle {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+#textPageText {
+  margin-bottom: 120px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+#footerTitle {
+  color: #222931;
+  font-size: 24px;
+  font-weight: 600;
+}
+#footerTitle2 {
+  margin-left: 20px;
+  color: #222931;
+  font-size: 24px;
+  font-weight: 600;
+} 
